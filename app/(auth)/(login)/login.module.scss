@@ -10,6 +10,9 @@
     align-items: center;
     // justify-content: center;
   }
+  logo {
+    background-image: url('/login.svg');
+  }
   .left_container {
     background-image: url('/login2.svg');
     background-size: contain;
@@ -28,7 +31,7 @@
     align-items: center;
     justify-content: center;
     flex: 6;
-    height: 100vh;
+    height: 80vh;
     width: 100%;
     .login_card {
       display: flex;
