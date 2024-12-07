@@ -1,0 +1,113 @@
+.sidebar {
+  width: 250px;
+  position: fixed;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  z-index: 50;
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  padding: 20px 0;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    img {
+      max-width: 100px;
+    }
+  }
+  .nav {
+    flex: 1;
+    padding: 0px 10px;
+    color: #213f7d;
+    overflow-y: auto;
+    .switch {
+      width: 100%;
+      padding: 6px;
+      border: none;
+      outline: none;
+      font-size: 16px;
+      text-decoration: none;
+      background-color: transparent;
+      display: flex;
+      align-items: center;
+      font-size: 1px;
+      justify-content: space-between;
+      gap: 4px;
+      color: #213f7d;
+      transition: background-color 0.3s;
+      margin-bottom: 29px;
+      div {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
+      &:hover {
+        background-color: #e0e7ff;
+      }
+    }
+    .sidebar_item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+      padding: 6px;
+      margin: 14px 0px;
+      &:hover {
+        background-color: #e0e7ff;
+      }
+      &.active {
+        background-color: #4f46e5;
+        color: white;
+      }
+      .icon {
+        margin-right: 10px;
+        font-size: 18px;
+        color: inherit;
+      }
+    }
+    .menu_header {
+      font-size: 12px;
+      text-transform: uppercase;
+      padding: 10px;
+      margin-top: 40px;
+      background-color: red;
+    }
+    .nav_section {
+      margin-bottom: 20px;
+      .section_title {
+        font-size: 14px;
+        color: #888;
+        text-transform: uppercase;
+        margin: 15px 20px 10px;
+      }
+      .nav_item {
+        display: flex;
+        align-items: center;
+        padding: 10px 20px;
+        color: #333;
+        font-size: 16px;
+        text-decoration: none;
+        transition: background-color 0.3s;
+        border-radius: 8px;
+        &:hover {
+          background-color: #e0e7ff;
+        }
+        &.active {
+          background-color: #4f46e5;
+          color: white;
+        }
+        .icon {
+          margin-right: 10px;
+          font-size: 18px;
+          color: inherit;
+        }
+      }
+    }
+  }
+}

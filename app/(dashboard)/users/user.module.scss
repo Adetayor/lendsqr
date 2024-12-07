@@ -1,0 +1,21 @@
+.user_section {
+  .user_card_container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+    margin: 40px 0px;
+    .user_card {
+      background-color: #fff;
+      width: 25%;
+      height: 120px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 10px;
+    }
+  }
+  .user_table {
+    margin-top: 40px;
+  }
+}
