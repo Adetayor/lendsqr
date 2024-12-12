@@ -9,48 +9,84 @@ function Users() {
   const dataSource = [
     {
       key: '1',
-      org: 'Mike',
-      username: 'adeeji',
-      email: '10 Downing Street',
-      phone: '099459590404',
-      date: '21/11/2024',
-      status: 'inactive',
+      org: 'Lendsqr',
+      username: 'adedeji',
+      email: 'adedeji@lendsqr.com',
+      phone: '08078903721',
+      date: 'May 15, 2020 10:00 AM',
+      status: 'Inactive',
     },
     {
       key: '1',
-      org: 'Mike',
-      username: 'adeeji',
-      email: '10 Downing Street',
-      phone: '099459590404',
-      date: '21/11/2024',
-      status: 'inactive',
+      org: 'Irorun',
+      username: 'Deji Ogana',
+      email: 'debby2@irorun.com',
+      phone: '08160780922',
+      date: 'Apr 30, 2020 10:00 AM',
+      status: 'Pending',
     },
     {
       key: '1',
-      org: 'Mike',
-      username: 'adeeji',
-      email: '10 Downing Street',
-      phone: '099459590404',
-      date: '21/11/2024',
-      status: 'inactive',
+      org: 'Lendstar',
+      username: 'Grace Effiom',
+      email: 'grace@lenstar.com',
+      phone: '07060780922',
+      date: 'Apr 30, 2020 10:00 AM',
+      status: 'Backlisted',
     },
     {
       key: '1',
-      org: 'Mike',
-      username: 'adeeji',
-      email: '10 Downing Street',
-      phone: '099459590404',
-      date: '21/11/2024',
-      status: 'inactive',
+      org: 'Lendsqr',
+      username: 'Tosin Dokunmu',
+      email: 'tosin@lendsqr.com',
+      phone: '07003309226',
+      date: 'Apr 10, 2020 10:00 AM',
+      status: 'Pending',
     },
     {
       key: '1',
-      org: 'Mike',
-      username: 'adeeji',
-      email: '10 Downing Street',
-      phone: '099459590404',
-      date: '21/11/2024',
-      status: 'inactive',
+      org: 'Lendstar',
+      username: 'Grace Effiom',
+      email: 'grace@lenstar.com',
+      phone: '07060780922',
+      date: 'Apr 30, 2020 10:00 AM',
+      status: 'Active',
+    },
+    {
+      key: '1',
+      org: 'Lendsqr',
+      username: 'Tosin Dokunmu',
+      email: 'tosin@lendsqr.com',
+      phone: '07003309226',
+      date: 'Apr 10, 2020 10:00 AM',
+      status: 'Active',
+    },
+    {
+      key: '1',
+      org: 'Lendstar',
+      username: 'Grace Effiom',
+      email: 'grace@lenstar.com',
+      phone: '07060780922',
+      date: 'Apr 30, 2020 10:00 AM',
+      status: 'Blacklisted',
+    },
+    {
+      key: '1',
+      org: 'Lendsqr',
+      username: 'Tosin Dokunmu',
+      email: 'tosin@lendsqr.com',
+      phone: '07003309226',
+      date: 'Apr 10, 2020 10:00 AM',
+      status: 'Inactive',
+    },
+    {
+      key: '1',
+      org: 'Lendstar',
+      username: 'Grace Effiom',
+      email: 'grace@lenstar.com',
+      phone: '07060780922',
+      date: 'Apr 30, 2020 10:00 AM',
+      status: 'Inactive',
     },
   ];
 
@@ -102,20 +138,41 @@ function Users() {
       },
     },
   ];
+  const userCards = [
+      {
+        title: 'USER',
+        count: 2_453,
+        icon: <BiUser />
+      },
+      {
+        title: 'ACTIVE USER',
+        count: 2_453,
+        icon: <BiUser />
+      },
+      {
+        title: 'USERS WITH LOANS',
+        count: '12,453',
+        icon: <BiUser />
+      },
+      {
+        title: 'USERS WITH SAVING',
+        count: 102_453,
+        icon: <BiUser />
+      },
+  ];
   return (
     <section className={styles.user_section}>
-      <h1>Users</h1>
+      <h1>USERS</h1>
       <div className={styles.user_card_container}>
-        {Array(4)
-          .fill('')
+        { userCards
           .map((item, idx) => (
             <Card className={styles.user_card}>
               <div>
-                <BiUser />
+                {item.icon}
               </div>
 
-              <span>Users</span>
-              <h5>2,456</h5>
+              <span>{item.title}</span>
+              <h5>{item.count}</h5>
             </Card>
           ))}
       </div>
@@ -123,6 +180,7 @@ function Users() {
       <div className={styles.user_table}>
         <Table dataSource={dataSource} columns={columns} />
       </div>
+
     </section>
   );
 }

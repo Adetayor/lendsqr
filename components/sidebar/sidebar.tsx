@@ -49,6 +49,67 @@ const customerData = [
   },
 ];
 
+const businessData = [
+  {
+    url: '/users',
+    label: 'Users',
+    icon: <BiUser />,
+  },
+  {
+    url: '/guarantors',
+    label: 'Guarantors',
+    icon: <BiUser />,
+  },
+  {
+    url: '/loan',
+    label: 'Loan',
+    icon: <BiUser />,
+  },
+  {
+    url: '/decision Model',
+    label: 'Decision Model',
+    icon: <BiUser />,
+  },
+  {
+    url: '/decision Model',
+    label: 'Savings',
+    icon: <BiUser />,
+  },
+  {
+    url: '/decision Model',
+    label: 'Loan Requests',
+    icon: <BiUser />,
+  },
+  {
+    url: '/decision Model',
+    label: 'Whitelist',
+    icon: <BiUser />,
+  },
+  {
+    url: '/decision Model',
+    label: 'Karma',
+    icon: <BiUser />,
+  },
+];
+
+const settingsData = [
+  {
+    url: '/users',
+    label: 'Users',
+    icon: <BiUser />,
+  },
+  {
+    url: '/guarantors',
+    label: 'Guarantors',
+    icon: <BiUser />,
+  },
+  {
+    url: '/loan',
+    label: 'Loan',
+    icon: <BiUser />,
+  },
+];
+
 type Props = {
   link: {
     url: string;
@@ -99,13 +160,13 @@ export function Sidebar() {
           return <SidebarItem key={idx} link={data} />;
         })}
 
-        <span className={styles.menu_header}>Businesses</span>
-        {customerData?.map((data, idx) => {
+        <span className={styles.menu_header}>Busineses</span>
+        {businessData?.map((data, idx) => {
           return <SidebarItem key={idx} link={data} />;
         })}
 
         <span className={styles.menu_header}>Settings</span>
-        {customerData?.map((data, idx) => {
+        {settingsData?.map((data, idx) => {
           return <SidebarItem key={idx} link={data} />;
         })}
       </div>

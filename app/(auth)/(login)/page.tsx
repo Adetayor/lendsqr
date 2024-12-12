@@ -4,6 +4,7 @@ import styles from './login.module.scss';
 import { TextField, Button } from '@/components';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 
 function Login() {
   const router = useRouter();
@@ -15,7 +16,11 @@ function Login() {
   return (
     <main className={styles.login_container}>
       {/* logo */}
-      <h1>logo</h1>
+      <Link href='/dashboard' className='size-fit'>
+        <div className={styles.logo}>
+          <Image src='/login.svg' alt='Logo' width={170.96} height={40.08} />
+        </div>
+      </Link>
       {/* main section */}
       <section>
         <aside className={styles.left_container}></aside>
